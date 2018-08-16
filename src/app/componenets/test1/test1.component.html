@@ -1,0 +1,75 @@
+<style>
+  .scroll-box{
+    overflow-y: scroll;
+    height:250px;
+    padding:1rem;
+  }
+</style>
+<div class="row">
+
+<div class="col-md-4" *ngFor="let data of dataset">
+ <div class="card" >
+  <div class="card-header">{{data.title}}
+      <div class="card-subtitle mb-2 text-muted">{{data.subtitle}}</div>
+  </div>
+  <div class="card-body text-center">
+    <div class="scroll-box" [hidden]="data.toggleImage">{{data.text}}</div>
+    <div style="height:250px" [hidden]="!data.toggleImage">
+    <img src="{{data.imgUrl}}" width="150px" alt="" >
+  </div>
+  </div>
+    <hr>
+  <div class="card-item text-center">
+      <button class="btn btn-primary" (click)="toggle(data.id)">{{data.showImageText}}</button>
+  </div>
+  
+  
+<!-- </div>
+</div>
+<div class="col-md-4">
+ <div class="card" >
+  <div class="card-header">Title 2
+      <div class="card-subtitle mb-2 text-muted">subject 2</div>
+  </div>
+  <div class="card-body">
+    <div class="scroll-box" [hidden]="toggleImage">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi saepe, repudiandae quod dolorum ea ipsam esse quidem dolore odio, cum distinctio recusandae autem, repellendus fugiat sapiente nam illo voluptatum cupiditate?
+    </div>
+    <div style="height:250px" [hidden]="!toggleImage">
+    <img src="../../../assets/sample.png" width="150px" alt="" >
+  </div>
+  </div>
+    <hr>
+  <div class="card-item text-center">
+      <button class="btn btn-primary" (click)="toggle()">{{showImageText}}</button>
+  </div>
+  
+  
+</div>
+</div>
+<div class="col-md-4">
+ <div class="card" >
+  <div class="card-header">Title 2
+      <div class="card-subtitle mb-2 text-muted">subject 2</div>
+  </div>
+  <div class="card-body">
+    <div class="scroll-box" [hidden]="toggleImage">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi saepe, repudiandae quod dolorum ea ipsam esse quidem dolore odio, cum distinctio recusandae autem, repellendus fugiat sapiente nam illo voluptatum cupiditate?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi saepe, repudiandae quod dolorum ea ipsam esse quidem dolore odio, cum distinctio recusandae autem, repellendus fugiat sapiente nam illo voluptatum cupiditate?
+    </div>
+    <div style="height:250px" [hidden]="!toggleImage">
+    <img src="../../../assets/sample.png" width="150px" alt="" >
+  </div>
+  </div>
+    <hr>
+  <div class="card-item text-center">
+      <button class="btn btn-primary" (click)="toggle()">{{showImageText}}</button>
+  </div>
+  
+  
+</div>
+</div>
+ -->
+
+
+</div>
